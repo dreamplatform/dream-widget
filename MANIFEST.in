@@ -1,0 +1,2 @@
+recursive-include dreamwidget/static *
+recursive-include dreamwidget/templates *

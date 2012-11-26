@@ -1,0 +1,89 @@
+#dream-notifications {
+  position: fixed;
+  width: auto;
+  height: auto;
+  min-height: 30px;
+  max-width: 80%;
+  top: 15px;
+  left: 110px;
+  background: #0b3144;
+  border: 1px solid #0b3144;
+  padding: 2px 5px;
+  
+  box-shadow: 0 0 2px rgba(0,0,0,.2);
+  z-index: 9998;
+}
+
+#dream-notifications:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -9px;
+  top: 20px;
+  margin-top: -9px;
+  border-right: 9px solid #0b3144;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+}
+
+#dream-notifications-list {
+  overflow: hidden;
+  /*max-height: 201px;*/
+}
+
+#dream-notifications-close {
+  position: absolute;
+  width: 34px;
+  height: 40px;
+  top: -20px;
+  right: -20px;
+  cursor: pointer;
+  z-index: 1;
+  background: url(img/dialog-close.png);
+  background-size: 100%;
+}
+
+.dream-notification {
+  margin: 3px 0;
+  padding: 8px 8px 5px 8px;
+  border-top: 1px solid #294A5B;
+  margin-top: 5px;
+  color: #ebf5f8;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  font-style: italic;
+}
+.dream-notification:first-child {
+  padding-top: 5px;
+  margin-top: 0;
+  border: 0;
+}
+
+.dream-notification:nth-child(n+4) {
+  display: none !important;
+}
+
+.dream-notification-initial {
+  display: none !important;
+}
+
+.dream-notification-initial:first-child {
+  display: block !important;
+}
+
+.dream-notification-clickable {
+  cursor: pointer;
+}
+
+.dream-notification-notify {
+  
+}
+
+.dream-notification-error {
+  /*background: #c42929;*/ /* TODO: Notify styles? Scrap em? */
+}
+
+.dream-notification-success {
+  
+}

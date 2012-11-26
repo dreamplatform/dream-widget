@@ -1,0 +1,48 @@
+{% load i18n %}
+<style>#dreamwidget{display:none;}</style>
+<div id="dreamwidget" class="clearfix">
+<ul class="dreamwidget-nav">
+  <li class="dreamwidget-nav-item dreamwidget-nav-item-notifications">
+    <span class="dreamwidget-nav-button js-dreamwidget-toggle-notifications">
+      <span class="dreamwidget-icon"></span>
+    </span>
+  </li>
+  <li class="dreamwidget-nav-item dreamwidget-nav-item-user">
+    <span class="dreamwidget-nav-button js-dreamwidget-toggle-user-nav">
+      <span class="dreamwidget-icon"></span>
+    </span>
+    <ul class="dreamwidget-user-nav">
+      <li class="dreamwidget-user-nav-item dreamwidget-user-nav-info clearfix">
+        <span class="dreamwidget-user-avatar"><img src="{% if user.picture_url %}{{ user.picture_url }}{% else %}{{ DREAMWIDGET_DOMAIN }}/static/dreamwidget/dream/img/icon-avatar.png{% endif %}" alt="" /></span>
+        <span class="dreamwidget-user-name">
+          <span class="dreamwidget-first-name">{{ user.first_name }}</span>
+          <span class="dreamwidget-last-name">{{ user.last_name }}</span>
+      </li>
+      <li class="dreamwidget-user-nav-item dreamwidget-user-nav-services">
+        <a class="dreamwidget-user-nav-button" href="{{ DREAMWIDGET_DESKTOP_DOMAIN }}" target="_blank">
+          <span class="dreamwidget-text">{% trans "My services" %}</span>
+          <span class="dreamwidget-icon"></span>
+        </a>
+      </li>
+      <li class="dreamwidget-user-nav-item dreamwidget-user-nav-settings">
+        <a class="dreamwidget-user-nav-button js-dreamwidget-open-dialog" href="{{ DREAMWIDGET_USERDB_DOMAIN }}/accounts/">
+          <span class="dreamwidget-text">{% trans "My account" %}</span>
+          <span class="dreamwidget-icon"></span>
+        </a>
+      </li>
+      <li class="dreamwidget-user-nav-item dreamwidget-user-nav-messaging">
+        <a class="dreamwidget-user-nav-button js-dreamwidget-open-dialog" href="{{ DREAMWIDGET_MSG_DOMAIN }}/mine/">
+          <span class="dreamwidget-text">{% trans "My messages" %}</span>
+          <span class="dreamwidget-icon"></span>
+        </a>
+      </li>
+      <li class="dreamwidget-user-nav-item dreamwidget-user-nav-logout">
+        <a class="dreamwidget-user-nav-button" href="{{ DREAMWIDGET_USERDB_DOMAIN }}/saml/SLO/">
+          <span class="dreamwidget-text">{% trans "Logout" %}</span>
+          <span class="dreamwidget-icon"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
